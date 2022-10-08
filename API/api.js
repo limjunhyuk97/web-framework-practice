@@ -1,4 +1,4 @@
-async function getLanguage(target) {
+async function getLanguage(target = "") {
   try {
     const data = await fetch(
       `https://wr4a6p937i.execute-api.ap-northeast-2.amazonaws.com/dev/languages?keyword=${target}`
@@ -10,4 +10,4 @@ async function getLanguage(target) {
   }
 }
 
-export default getLanguage;
+export { getLanguage };

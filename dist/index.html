@@ -4,15 +4,31 @@
     <link rel="stylesheet" href="/style.e308ff8e.css">
   <script src="/style.e308ff8e.js"></script></head>
   <body>
-    <main class="App">
-      <div class="SelectedLanguage">
-        <ul data-component="selectedResult"></ul>
+    <!-- 전체 App  -->
+    <template id="Search-App">
+      <div class="App">
+        <div class="SelectedLanguage">
+          <!-- 클릭 결과 : data-component SelectedResult -->
+          <ul data-component="SelectedResult"></ul>
+        </div>
+        <form class="SearchInput">
+          <input class="SearchInput__input" type="text" placeholder="프로그램 언어를 입력하세요.">
+        </form>
+        <!-- 검색 결과 : data-component SearchResult -->
+        <div data-component="SearchedResult" class="Suggestion"></div>
       </div>
-      <form class="SearchInput">
-        <input class="SearchInput__input" type="text" placeholder="프로그램 언어를 입력하세요.">
-      </form>
-      <div data-component="SearchedResult" class="Suggestion"></div>
-    </main>
+    </template>
+
+    <!-- 검색 결과 요소 -->
+    <template id="Searched-Item">
+      <li></li>
+    </template>
+
+    <!-- root -->
+    <div id="root">
+      <div data-component="app"></div>
+    </div>
+
     <script src="/JFrame.e31bb0bc.js"></script>
   </body>
 </html>
